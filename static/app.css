@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: block;
+    width: 100%;
+}
+
+table, td {
+    font-size: 4rem;
+    border: 1px solid black;
+    margin: 0px;
+}
+
+p{
+    display: inline;
+    margin-right: 20px;
+}
+
+#wordResponse {
+    width: 100%;
+}
+
+#stats {
+    width: 100%;
+}

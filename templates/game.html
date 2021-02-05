@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/app.css">
+    <title>Boggle</title>
+</head>
+
+<body>
+    <h1>Boggle the Mind </h1>
+    <div id="stats">
+        <div>
+            <p>Current Score: <span id="score">{{session['total_score']}}</span></p>
+            <p>High Score: <span id="highScore">{{session['high_score']}}</span></p>
+            <p>Games Played: <span id="gamesPlayed">{{session['games_played']}}</span></p>
+        </div>
+    </div>
+    <div id="game_board">
+        <table>
+            {%for row in session['board']%}
+            <tr>
+                {%for char in row %}
+                <td>{{char}}</td>
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+    <div id="wordResponse">
+
+    </div>
+    <form action="" id="form">
+        <label for="word"></label>
+        <input type="text" placeholder="Guess a word" id="word" name="word">
+        <button>Submit</button>
+    </form>
+    <a href="/"><button>Start New Game?</button></a>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="static/app.js"></script>
+</body>
+
+</html>
