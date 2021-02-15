@@ -39,6 +39,7 @@ def check_guess():
     validated_word, session['words_used'] = validate_word(
         word, session['words_used'], session['board'])
     word_score = calculate_score(word, validated_word)
+    session['total_score'] = session['total_score'] + word_score
     session['high_score'] = calculate_high_score(session['total_score'],
                                                  session['high_score'])
 
